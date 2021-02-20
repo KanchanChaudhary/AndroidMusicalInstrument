@@ -19,7 +19,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BannerActivity"></activity>
+        <activity android:name=".BeerActivity"></activity>
+        <activity android:name=".CartList_Activity" />
+        <activity android:name=".HardDrinks_Activity" />
+        <activity android:name=".Item_List_Activity" />
+        <activity android:name=".Item_Details_Activity" />
+        <activity android:name=".Log_Out_Activity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".BannerActivity" />
         <activity android:name=".WineActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".RegisterActivity" />

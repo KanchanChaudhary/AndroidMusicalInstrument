@@ -15,9 +15,9 @@ public class CartBll {
 
     public boolean checkcart(String userId, String itemID) {
         UserApi usersAPI = url.getInstance().create(UserApi.class);
-        Call<Cart> addCart = usersAPI.addcart(url.token,itemID);
+        Call<Cart> addcart = usersAPI.addcart(url.token,itemID);
         try {
-            Response<Cart> response = addCart.execute();
+            Response<Cart> response = addcart.execute();
             if(response.code()==200)
             {
                 isSuccess = true;

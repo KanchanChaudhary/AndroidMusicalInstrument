@@ -13,6 +13,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -30,9 +31,21 @@ public interface UserApi {
     @POST("cart/checkcart")
     Call<CartResponse> checkcart(@Field("productid") String productid, @Field("userid") String userid);
 
-    @POST("cart/addcart")
-    Call<Void> addcart(@Body Cart cart);
+    @FormUrlEncoded
+    @POST("cart/checkcart")
+    @Headers("Content-Type:application/x-www-form-urlencoded")
+    Call<CartResponse> checkcart(
+            @Header("Authorization") String token,
+            @Field("userId") String userid,
+            @Field("itemID") String itemID);
 
+
+    @FormUrlEncoded
+    @Headers("Content-Type:application/x-www-form-urlencoded")
+    Call<Cart> addcart(
+            @Header("Authorization") String token,
+            @Field("itemID") String itemID
+    );
     @Multipart
     @POST("upload")
     Call<ImageResponse> uploadImage(@Part MultipartBody.Part img);
