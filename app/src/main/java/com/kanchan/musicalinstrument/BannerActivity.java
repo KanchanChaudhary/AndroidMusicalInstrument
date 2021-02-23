@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.kanchan.musicalinstrument.PermissionApi.LinkPermission;
+import com.kanchan.musicalinstrument.PermissionApi.StoragePath;
 
 public class BannerActivity extends AppCompatActivity {
     private ImageView imageView;

@@ -10,7 +10,7 @@ import androidx.core.app.ActivityCompat;
 
 public class LinkPermission {
     private Context mContext;
-    public LinkPermisson(Context mContext){
+    public LinkPermission(Context mContext){
         this.mContext=mContext;
     }
 
